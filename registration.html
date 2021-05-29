@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="assets/css/prop.css">
+    <link rel="stylesheet" href="assets/css/login2.css">
+</head>
+<body>   
+     <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                        <img src="assets/images/logoddd.png" alt="" style="width: 90px;">
+                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#services">Our Services</a></li>
+                            <li><a href="#about_us">About Us</a></li>  
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#pr-doctor">Book Appointment</a></li>
+                            <li class="login-link">
+                                <a href="login.html">Login/Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 d-none d-lg-block appoint">
+                        <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-success btn-info btn-round">Login/Sign Up</button>
+                    </div>
+ 
+
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="form-title text-center">
+                    <h4>Create an account</h4>
+                  </div>
+                  <div id="id01" class="model">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <form action="login.html">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name1" placeholder="Your name......">
+                        </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                      </div>
+                      <button onclick="document.getElementById('id01')" type="submit" class="btn btn-info btn-block btn-round">Sign Up</button>
+                    </form>
+                    
+                    <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                      <button type="button" class="btn btn-primary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </button>
+                      <button type="button" class="btn btn-primary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                      </button>
+                      <button type="button" class="btn btn-primary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                        <i class="fab fa-linkedin"></i>
+                      </button>
+                    </di>
+                  </div>
+                </div>
+              </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <div class="signup-section">Already have an account? <a href="login.html" class="text-info"> Log in</a>.</div>
+                </div>
+            </div>
+          </div>
+    </div>
+    <div  class="slider container-fluid">
+        <div id="slider">
+            <div class="lis">
+                <img src="assets/images/slider/slider_1.jpg" alt="">
+                <div class="slider-layer">
+                 <div class="container">
+                     <h1 class="animated  fadeInRightBig ">You are in the Right Place <br> at the Right Time</h1>
+                     <p class="animated  fadeInLeftBig">Therefore do not be anxious about tomorrow, for tomorrow will be anxious for itself.<br> Sufficient for the day is its own trouble.</p>
+                 </div>
+                </div>
+            
+            </div>
+        </div>
+</div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script src="assets/plugins/scroll-nav/js/jquery.easing.min.js"></script>    
+    <script src="assets/plugins/scroll-nav/js/scrolling-nav.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        var modal=document.getElementById('id01');
+       window.onclick=function(event){
+           if(event.target==modal){
+               modal.style.display="none";
+           }
+       }
+        $(document).ready(function() {             
+       $('#loginModal').modal('show');
+         $(function () {
+           $('[data-toggle="tooltip"]').tooltip()
+         })
+       });
+
+   </script>
+</html>
